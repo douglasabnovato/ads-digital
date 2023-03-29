@@ -1,40 +1,46 @@
 //2 ) Fibonacci
 console.log("executando Fibonacci...");
 
-let penultimo = 0;
-let ultimo = 1;
+let buscado = prompt("Informe um numero para pesquisar ");
 
-let proximo = 0;
+let ultimo = 0;
+let penultimo = 1;
 
-let termo = 6;
+let termo = parseInt(buscado) + 3;
 
-let buscado = 5;
-encontrado = "nao"
+encontrado = "nao";
 
 if (termo <= 2) {
   for (var count = 1; count <= termo; count++) {
-    if (proximo == buscado) encontrado = "sim"
-    console.log(count, ": ", proximo);
-    proximo = termo - 1;
+    elementValue = count - 1;
+    console.log(count, ": ", elementValue);
+    if (elementValue == buscado) encontrado = "sim";
   }
 } else {
-  console.log(penultimo + 1, ": ", penultimo);
-  console.log(ultimo + 1, ": ", ultimo);
+  for (var count = 1; count <= 2; count++) {
+    elementValue = count - 1;
+    console.log(count, ": ", elementValue);
+    if (elementValue == buscado) encontrado = "sim";
+  }
+
   for (var count = 3; count <= termo; count++) {
-    if (proximo == buscado) encontrado = "sim"
     proximo = ultimo + penultimo;
-    penultimo = ultimo;
-    ultimo = proximo;
 
     console.log(count, ": ", proximo);
+
+    ultimo = penultimo;
+    penultimo = proximo;
+
+    if (proximo == buscado) encontrado = "sim";
   }
 }
 
-if (encontrado == "sim") { 
-    console.log("O número informado ", buscado, " pertence a sequência.");
+if (encontrado == "sim") {
+  console.log("O número informado ", buscado, " pertence a sequência.");
 } else {
-    console.log("O número informado ", buscado, " NÃO pertence a sequência.");
+  console.log("O número informado ", buscado, " NÃO pertence a sequência.");
 }
+ 
 
 /** 
 //1 ) soma
