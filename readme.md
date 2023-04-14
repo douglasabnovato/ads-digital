@@ -13,6 +13,7 @@ Criar uma calculadora para realizar as quatro operações matemáticas.
 
 Pedir ao usuário para escolher a operação a ser realizada.
 
+Abordagens:
 1. instruções if/else 
 2. laços for
 3. funções js
