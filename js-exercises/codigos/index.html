@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/js-favicon.png"
+      type="image/x-icon"
+    />
+    <title>Fundamentos JS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        <h1>5 Questões</h1>
+      </div>
+      <div class="container">
+        <div id="enterNumbers" class="box">
+          <h2>Dois números inteiros positivos:</h2>
+          <div>
+            <span id="firstNumber"></span><span id="mathOperation"></span
+            ><span id="secondNumber"></span>
+          </div>
+          <div id="division" class="box">
+            O resultado da divisão é: <span id="divisionResult"></span>
+            <br />
+            <input
+              class="inputDividir"
+              type="button"
+              value="Dividir"
+              onclick="divisao()"
+            />
+          </div>
+        </div>
+        <div class="box">
+          <h2>Qual o seu animal?</h2>
+          <dialog id="favDialog">
+            <form method="dialog">
+              <section>
+                <p>
+                  <label for="favAnimal">Favorite animal:</label>
+                  <select id="favAnimal">
+                    <option></option>
+                    <option value="1">Brine shrimp</option>
+                    <option value="2">Red panda</option>
+                    <option value="3">Spider monkey</option>
+                  </select>
+                </p>
+              </section>
+              <menu>
+                <button id="cancel" type="reset">Cancel</button>
+                <button type="submit">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+          <menu>
+            <button class="updateDetails" id="updateDetails">Update details</button>
+          </menu>
+        </div>
+        <div class="box">
+          <h2>Quem é você?</h2>
+          <form name="formCadastro" onsubmit="return validarFormulario()">
+            <label for="nome">Informe o seu Nome:</label>
+            <br />
+            <input type="text" name="nome" />
+            <br />
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+        <div class="box">
+          <h2>Edite sua lista</h2>
+          <p>Escolha um item da lista para removê-lo:</p>
+          <select name="itens" id="itens" size="6" style="width: 150px">
+            <option>Camiseta</option>
+            <option>Calça</option>
+            <option>Sapato</option>
+            <option>Bolsa</option>
+          </select>
+          <br />
+          <input
+            type="button"
+            value="Excluir item"
+            onclick="excluirItemSelecionado()"
+          />
+          <input
+            type="button"
+            value="Adicionar item"
+            onclick="adicionarItem()"
+          />
+        </div>
+        <div class="calculator">
+          <h2>Calculadora</h2>
+          <p>Realizar as quatro operações matemáticas</p>
+          <p>Escolher a operação a ser realizada</p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
