@@ -10,4 +10,5 @@
 ### Projeto Calculadora
 
 Criar uma calculadora para realizar as quatro operações matemáticas.
+
 Pedir ao usuário para escolher a operação a ser realizada.
