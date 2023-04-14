@@ -12,3 +12,11 @@
 Criar uma calculadora para realizar as quatro operações matemáticas.
 
 Pedir ao usuário para escolher a operação a ser realizada.
+
+1. instruções if/else 
+2. laços for
+3. funções js
+4. arrow functions
+5. && e || operadores
+6. propriedade textContent
+7. evento eventListeners
