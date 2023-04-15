@@ -1,4 +1,8 @@
-## códigos em javascript
+# códigos em javascript
+
+## Pasta `js-exercises`
+
+Desafios em javascript com front em html e css.
 
 ### Exercícios JS
 
@@ -26,7 +30,7 @@ Abordagens:
 
 #### Referências
 
-[freecodecamp Calculadora](https://www.freecodecamp.org/portuguese/news/como-construir-uma-calculadora-html-do-zero-usando-javascript/)
-[zellwk Calculator 1](https://zellwk.com/blog/calculator-part-1/)
-[zellwk Calculator 2](https://zellwk.com/blog/calculator-part-2/)
-[zellwk Calculator 3](https://zellwk.com/blog/calculator-part-3/)
+- [freecodecamp Calculadora](https://www.freecodecamp.org/portuguese/news/como-construir-uma-calculadora-html-do-zero-usando-javascript/)
+- [zellwk Calculator 1](https://zellwk.com/blog/calculator-part-1/)
+- [zellwk Calculator 2](https://zellwk.com/blog/calculator-part-2/)
+- [zellwk Calculator 3](https://zellwk.com/blog/calculator-part-3/)
