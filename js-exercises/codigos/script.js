@@ -24,18 +24,18 @@ function divisao() {
   mathOperation.innerHTML = "/";
   let divDivisionResult = document.getElementById("divisionResult");
   divDivisionResult.innerHTML = dividir(firstNum, secondNum);
-  let conversa = confirm("Gostou?", "SIM ou NÃO")
-  console.log("conversa", conversa)
+  let conversa = confirm("Gostou?", "SIM ou NÃO");
+  console.log("conversa", conversa);
 }
 
-var select = document.querySelector('select');
+var select = document.querySelector("select");
 
-select.addEventListener('change', function() {
+select.addEventListener("change", function () {
   var option = this.selectedOptions[0];
   var texto = option.textContent;
 
   console.log(texto);
-}); 
+});
 
 (function () {
   var updateButton = document.getElementById("updateDetails");
@@ -96,3 +96,38 @@ function adicionarItem() {
     itens.add(option, itens[0]);
   }
 }
+
+const calculator = document.querySelector(".calculator");
+const keys = calculator.querySelector(".calculator__keys");
+
+keys.addEventListener("click", (e) => {
+  if (e.target.matches("button")) {
+    const key = e.target;
+    const action = key.dataset.action;
+
+    if (!action) {
+      console.log("number_key");
+    }
+
+    if (
+      action === "add" ||
+      action === "subtract" ||
+      action === "multiply" ||
+      action === "divide"
+    ) {
+      console.log("operator key!");
+    }
+
+    if (action === "decimal") {
+      console.log("decimal key!");
+    }
+
+    if (action === "clear") {
+      console.log("clear key!");
+    }
+
+    if (action === "calculate") {
+      console.log("equal key!");
+    }
+  }
+});

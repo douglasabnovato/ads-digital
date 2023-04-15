@@ -23,3 +23,7 @@ Abordagens:
 7. && e || operadores
 8. propriedade textContent
 9. evento eventListeners
+
+#### Referências
+
+[Calculator](https://www.freecodecamp.org/portuguese/news/como-construir-uma-calculadora-html-do-zero-usando-javascript/)
