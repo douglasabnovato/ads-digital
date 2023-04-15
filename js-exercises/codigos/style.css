@@ -169,8 +169,8 @@ body {
   background-color: #cccccc;
 }
 
-.calculator__keys button:hover { 
-  background-color:  #999;
+.calculator__keys button:hover {
+  background-color: #999;
 }
 
 .calculator__keys > * {
@@ -204,6 +204,6 @@ body {
   grid-row: 2 / span 4;
 }
 
-.key--equal:hover { 
-  background-image: linear-gradient(to bottom, #7c7b7b, #1a1412); 
+.key--equal:hover {
+  background-image: linear-gradient(to bottom, #7c7b7b, #1a1412);
 }
