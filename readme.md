@@ -27,4 +27,6 @@ Abordagens:
 #### Referências
 
 [freecodecamp Calculadora](https://www.freecodecamp.org/portuguese/news/como-construir-uma-calculadora-html-do-zero-usando-javascript/)
-[zellwk Calculator](https://zellwk.com/blog/calculator-part-1/)
+[zellwk Calculator 1](https://zellwk.com/blog/calculator-part-1/)
+[zellwk Calculator 2](https://zellwk.com/blog/calculator-part-2/)
+[zellwk Calculator 3](https://zellwk.com/blog/calculator-part-3/)
