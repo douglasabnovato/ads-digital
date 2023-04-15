@@ -14,10 +14,12 @@ Criar uma calculadora para realizar as quatro operações matemáticas.
 Pedir ao usuário para escolher a operação a ser realizada.
 
 Abordagens:
-1. instruções if/else 
-2. laços for
-3. funções js
-4. arrow functions
-5. && e || operadores
-6. propriedade textContent
-7. evento eventListeners
+1. CSS Grid para dispor as teclas
+2. estilização com css
+3. instruções if/else 
+4. laços for
+5. funções js
+6. arrow functions
+7. && e || operadores
+8. propriedade textContent
+9. evento eventListeners
