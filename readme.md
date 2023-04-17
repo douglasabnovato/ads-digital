@@ -1,4 +1,3 @@
-# códigos em javascript
+# ads
 
-- html-exercises
-- js-exercises
+- disciplinas
