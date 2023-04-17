@@ -1,4 +1,4 @@
-console.log("Executando ...");
+console.log("Executando inteiros positivos ...");
 
 var firstNum;
 var secondNum;
@@ -28,76 +28,7 @@ function divisao() {
   console.log("conversa", conversa);
 }
 
-var select = document.querySelector("select");
-
-select.addEventListener("change", function () {
-  var option = this.selectedOptions[0];
-  var texto = option.textContent;
-
-  console.log(texto);
-});
-
-(function () {
-  var updateButton = document.getElementById("updateDetails");
-  var cancelButton = document.getElementById("cancel");
-  var favDialog = document.getElementById("favDialog");
-
-  updateButton.addEventListener("click", function () {
-    favDialog.showModal();
-  });
-
-  cancelButton.addEventListener("click", function () {
-    favDialog.close();
-  });
-})();
-
-function validarFormulario() {
-  var nomePessoa = document.forms["formCadastro"]["nome"].value;
-  if (nomePessoa == "") {
-    alert("Favor informar o seu nome!");
-    return false;
-  } else {
-    alert("Olá, " + nomePessoa + " !");
-    return true;
-  }
-}
-
-function excluirItemSelecionado() {
-  var itens = document.getElementById("itens");
-
-  if (itens.selectedIndex == -1) {
-    alert("Selecione um item na lista!");
-    return;
-  }
-
-  var indice = itens.options[itens.selectedIndex].index;
-  var itemSelecionado = itens.options[itens.selectedIndex].text;
-  var resultado = confirm("Deseja excluir o item: " + itemSelecionado + " ?");
-
-  if (resultado == true) {
-    itens.removeChild(itens[indice]);
-    alert("O item " + itemSelecionado + " será excluído da lista!");
-  } else {
-    alert("Você desistiu de excluir o item " + itemSelecionado + " da lista!");
-  }
-}
-
-function adicionarItem() {
-  var item = prompt(
-    "Qual objeto você deseja incluir na lista?",
-    "Adicione um novo objeto"
-  );
-  if (item == null || item == "") {
-    alert("O uso do prompt foi cancelado!");
-  } else {
-    var itens = document.getElementById("itens");
-    var option = document.createElement("option");
-    option.text = item;
-    itens.add(option, itens[0]);
-  }
-}
-
-console.log("Calculadora ...");
+console.log("Executando сalculadora ...");
 
 const calculate = (n1, operator, n2) => {
   const firstNum = parseFloat(n1);
@@ -216,3 +147,80 @@ keys.addEventListener("click", (e) => {
     }
   }
 });
+
+console.log("Executando select ...");
+
+var select = document.querySelector("select");
+
+select.addEventListener("change", function () {
+  var option = this.selectedOptions[0];
+  var texto = option.textContent;
+
+  console.log(texto);
+});
+
+console.log("Executando dialog ...");
+
+(function () {
+  var updateButton = document.getElementById("updateDetails");
+  var cancelButton = document.getElementById("cancel");
+  var favDialog = document.getElementById("favDialog");
+
+  updateButton.addEventListener("click", function () {
+    favDialog.showModal();
+  });
+
+  cancelButton.addEventListener("click", function () {
+    favDialog.close();
+  });
+})();
+
+console.log("Executando forms ...");
+
+function validarFormulario() {
+  var nomePessoa = document.forms["formCadastro"]["nome"].value;
+  if (nomePessoa == "") {
+    alert("Favor informar o seu nome!");
+    return false;
+  } else {
+    alert("Olá, " + nomePessoa + " !");
+    return true;
+  }
+}
+
+console.log("Executando crud ...");
+
+function excluirItemSelecionado() {
+  var itens = document.getElementById("itens");
+
+  if (itens.selectedIndex == -1) {
+    alert("Selecione um item na lista!");
+    return;
+  }
+
+  var indice = itens.options[itens.selectedIndex].index;
+  var itemSelecionado = itens.options[itens.selectedIndex].text;
+  var resultado = confirm("Deseja excluir o item: " + itemSelecionado + " ?");
+
+  if (resultado == true) {
+    itens.removeChild(itens[indice]);
+    alert("O item " + itemSelecionado + " será excluído da lista!");
+  } else {
+    alert("Você desistiu de excluir o item " + itemSelecionado + " da lista!");
+  }
+}
+
+function adicionarItem() {
+  var item = prompt(
+    "Qual objeto você deseja incluir na lista?",
+    "Adicione um novo objeto"
+  );
+  if (item == null || item == "") {
+    alert("O uso do prompt foi cancelado!");
+  } else {
+    var itens = document.getElementById("itens");
+    var option = document.createElement("option");
+    option.text = item;
+    itens.add(option, itens[0]);
+  }
+}

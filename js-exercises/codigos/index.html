@@ -14,18 +14,22 @@
   </head>
   <body>
     <div class="main">
+
       <div class="title">
-        <h1>5 Questões</h1>
+        <h1>Fundamentos JS</h1>
       </div>
+
       <div class="container">
         <div id="enterNumbers" class="box">
-          <h2>Dois números inteiros positivos:</h2>
+          <div class="title">
+            <h2>Dois números inteiros positivos:</h2>
+          </div>
           <div>
             <span id="firstNumber"></span><span id="mathOperation"></span
             ><span id="secondNumber"></span>
           </div>
           <div id="division" class="box">
-            O resultado da divisão é: <span id="divisionResult"></span>
+            O resultado da divisão é igual a <span id="divisionResult"></span>
             <br />
             <input
               class="inputDividir"
@@ -35,65 +39,8 @@
             />
           </div>
         </div>
-        <div class="box">
-          <h2>Qual o seu animal?</h2>
-          <dialog id="favDialog">
-            <form method="dialog">
-              <section>
-                <p>
-                  <label for="favAnimal">Favorite animal:</label>
-                  <select id="favAnimal">
-                    <option></option>
-                    <option value="1">Brine shrimp</option>
-                    <option value="2">Red panda</option>
-                    <option value="3">Spider monkey</option>
-                  </select>
-                </p>
-              </section>
-              <menu>
-                <button id="cancel" type="reset">Cancel</button>
-                <button type="submit">Confirm</button>
-              </menu>
-            </form>
-          </dialog>
-          <menu>
-            <button class="updateDetails" id="updateDetails">
-              Update details
-            </button>
-          </menu>
-        </div>
-        <div class="box">
-          <h2>Quem é você?</h2>
-          <form name="formCadastro" onsubmit="return validarFormulario()">
-            <label for="nome">Informe o seu Nome:</label>
-            <br />
-            <input type="text" name="nome" />
-            <br />
-            <input type="submit" value="Enviar" />
-          </form>
-        </div>
-        <div class="box">
-          <h2>Edite sua lista</h2>
-          <p>Escolha um item da lista para removê-lo:</p>
-          <select name="itens" id="itens" size="6" style="width: 150px">
-            <option>Camiseta</option>
-            <option>Calça</option>
-            <option>Sapato</option>
-            <option>Bolsa</option>
-          </select>
-          <br />
-          <input
-            type="button"
-            value="Excluir item"
-            onclick="excluirItemSelecionado()"
-          />
-          <input
-            type="button"
-            value="Adicionar item"
-            onclick="adicionarItem()"
-          />
-        </div>
       </div>
+
       <div class="calculator_html">
         <div class="calculator_body">
           <div class="calculator_container">
@@ -127,7 +74,79 @@
           </div>
         </div>
       </div>
-    </div>
+      <!-- calculator html -->
+
+      <div class="container">
+        <div class="box">
+          <div class="title">
+            <h2>Qual o seu animal?</h2>
+          </div>
+          <dialog id="favDialog">
+            <form method="dialog">
+              <section>
+                <p>
+                  <label for="favAnimal">Favorite animal:</label>
+                  <select id="favAnimal">
+                    <option></option>
+                    <option value="1">Brine shrimp</option>
+                    <option value="2">Red panda</option>
+                    <option value="3">Spider monkey</option>
+                  </select>
+                </p>
+              </section>
+              <menu>
+                <button id="cancel" type="reset">Cancel</button>
+                <button type="submit">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+          <menu>
+            <button class="updateDetails" id="updateDetails">
+              Update details
+            </button>
+          </menu>
+        </div>
+
+        <div class="box">
+          <div class="title">
+            <h2>Quem é você?</h2>
+          </div>
+          <form name="formCadastro" onsubmit="return validarFormulario()">
+            <label for="nome">Informe o seu Nome:</label>
+            <br />
+            <input type="text" name="nome" />
+            <br />
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+
+        <div class="box">
+          <div class="title">
+            <h2>Edite sua lista</h2>
+          </div>
+          <p>Escolha um item da lista para removê-lo:</p>
+          <select name="itens" id="itens" size="6" style="width: 150px">
+            <option>Camiseta</option>
+            <option>Calça</option>
+            <option>Sapato</option>
+            <option>Bolsa</option>
+          </select>
+          <br />
+          <input
+            type="button"
+            value="Excluir item"
+            onclick="excluirItemSelecionado()"
+          />
+          <input
+            type="button"
+            value="Adicionar item"
+            onclick="adicionarItem()"
+          />
+        </div>
+      </div> <!-- container -->
+
+    </div> <!-- main -->
+
     <script src="./script.js"></script>
   </body>
 </html>
