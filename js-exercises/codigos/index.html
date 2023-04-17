@@ -22,11 +22,11 @@
       <div class="container">
         <div id="enterNumbers" class="box">
           <div class="title">
-            <h2>Dois números inteiros positivos:</h2>
+            <h2>Dois números inteiros positivos para divisão:</h2>
           </div>
           <div>
-            <span id="firstNumber"></span><span id="mathOperation"></span
-            ><span id="secondNumber"></span>
+            <span id="firstNumberDiv"></span><span id="mathOperationDiv"></span
+            ><span id="secondNumberDiv"></span>
           </div>
           <div id="division" class="box">
             O resultado da divisão é igual a <span id="divisionResult"></span>
@@ -36,6 +36,44 @@
               type="button"
               value="Dividir"
               onclick="divisao()"
+            />
+          </div>
+        </div>
+        <div id="enterNumbers" class="box">
+          <div class="title">
+            <h2>Dois números inteiros positivos para multiplicação:</h2>
+          </div>
+          <div>
+            <span id="firstNumberMult"></span><span id="mathOperationMult"></span
+            ><span id="secondNumberMult"></span>
+          </div>
+          <div id="multiplication" class="box">
+            O resultado da multiplicação é igual a <span id="multiplicationResult"></span>
+            <br />
+            <input
+              class="inputMultiplicar"
+              type="button"
+              value="Multiplicar"
+              onclick="multiplicacao()"
+            />
+          </div>
+        </div>
+        <div id="enterNumbers" class="box">
+          <div class="title">
+            <h2>Dois números inteiros positivos para somar:</h2>
+          </div>
+          <div>
+            <span id="firstNumberSum"></span><span id="mathOperationSum"></span
+            ><span id="secondNumberSum"></span>
+          </div>
+          <div id="sum" class="box">
+            O resultado da divisão é igual a <span id="sumResult"></span>
+            <br />
+            <input
+              class="inputSomar"
+              type="button"
+              value="Somar"
+              onclick="soma()"
             />
           </div>
         </div>

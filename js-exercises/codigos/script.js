@@ -1,29 +1,95 @@
-console.log("Executando inteiros positivos ...");
+console.log("Executando dois números inteiros ...");
 
-var firstNum;
-var secondNum;
+var firstNumDiv;
+var secondNumDiv;
 
-function insertNumbers() {
-  let divFirstNum = document.getElementById("firstNumber");
-  let divSecondNum = document.getElementById("secondNumber");
+function insertNumbersDiv() {
+  let divFirstNum = document.getElementById("firstNumberDiv");
+  let divSecondNum = document.getElementById("secondNumberDiv");
 
-  firstNum = prompt("Inserir o primeiro número:", "1º inteiro positivo");
-  divFirstNum.innerHTML = firstNum;
+  firstNumDiv = prompt("Inserir o primeiro número para divisão:", "1º inteiro positivo");
+  divFirstNum.innerHTML = firstNumDiv;
 
-  secondNum = prompt("Inserir o segundo número:", "2º inteiro positivo");
-  divSecondNum.innerHTML = secondNum;
+  secondNumDiv = prompt("Inserir o segundo número para divisão:", "2º inteiro positivo");
+  divSecondNum.innerHTML = secondNumDiv;
 }
+
+console.log("Executando divisão ...");
 
 function dividir(numero1, numero2) {
   return numero1 / numero2;
 }
 
 function divisao() {
-  insertNumbers();
-  let mathOperation = document.getElementById("mathOperation");
-  mathOperation.innerHTML = "/";
+  insertNumbersDiv();
+  let mathOperation = document.getElementById("mathOperationDiv");
+  mathOperation.innerHTML = " / ";
   let divDivisionResult = document.getElementById("divisionResult");
-  divDivisionResult.innerHTML = dividir(firstNum, secondNum);
+  divDivisionResult.innerHTML = dividir(firstNumDiv, secondNumDiv);
+  let conversa = confirm("Gostou?", "SIM ou NÃO");
+  console.log("conversa", conversa);
+}
+
+console.log("Executando dois números inteiros ...");
+
+var firstNumMult;
+var secondNumMult;
+
+function insertNumbersMult() {
+  let divFirstNum = document.getElementById("firstNumberMult");
+  let divSecondNum = document.getElementById("secondNumberMult");
+
+  firstNumMult = prompt("Inserir o primeiro número para multiplicação:", "1º inteiro positivo");
+  divFirstNum.innerHTML = firstNumMult;
+
+  secondNumMult = prompt("Inserir o segundo número para multiplicação:", "2º inteiro positivo");
+  divSecondNum.innerHTML = secondNumMult;
+}
+
+console.log("Executando multiplicação ...");
+
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+}
+
+function multiplicacao() {
+  insertNumbersMult();
+  let mathOperation = document.getElementById("mathOperationMult");
+  mathOperation.innerHTML = " * ";
+  let divMultiplicationResult = document.getElementById("multiplicationResult");
+  divMultiplicationResult.innerHTML = multiplicar(firstNumMult, secondNumMult);
+  let conversa = confirm("Gostou?", "SIM ou NÃO");
+  console.log("conversa", conversa);
+}
+
+console.log("Executando dois números inteiros ...");
+
+var firstNumSum;
+var secondNumSum;
+
+function insertNumbersSum() {
+  let divFirstNum = document.getElementById("firstNumberSum");
+  let divSecondNum = document.getElementById("secondNumberSum");
+
+  firstNumSum = prompt("Inserir o primeiro número para soma:", "1º inteiro positivo");
+  divFirstNum.innerHTML = firstNumSum;
+
+  secondNumSum = prompt("Inserir o segundo número para soma:", "2º inteiro positivo");
+  divSecondNum.innerHTML = secondNumSum;
+}
+
+console.log("Executando soma ...");
+
+function somar(numero1, numero2) {
+  return parseInt(numero1) + parseInt(numero2);
+}
+
+function soma() {
+  insertNumbersSum();
+  let mathOperation = document.getElementById("mathOperationSum");
+  mathOperation.innerHTML = " + ";
+  let divSumResult = document.getElementById("sumResult");
+  divSumResult.innerHTML = somar(firstNumSum, secondNumSum);
   let conversa = confirm("Gostou?", "SIM ou NÃO");
   console.log("conversa", conversa);
 }
