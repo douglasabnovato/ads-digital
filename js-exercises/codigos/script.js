@@ -7,10 +7,16 @@ function insertNumbersDiv() {
   let divFirstNum = document.getElementById("firstNumberDiv");
   let divSecondNum = document.getElementById("secondNumberDiv");
 
-  firstNumDiv = prompt("Inserir o primeiro número para divisão:", "1º inteiro positivo");
+  firstNumDiv = prompt(
+    "Inserir o primeiro número para divisão:",
+    "1º inteiro positivo"
+  );
   divFirstNum.innerHTML = firstNumDiv;
 
-  secondNumDiv = prompt("Inserir o segundo número para divisão:", "2º inteiro positivo");
+  secondNumDiv = prompt(
+    "Inserir o segundo número para divisão:",
+    "2º inteiro positivo"
+  );
   divSecondNum.innerHTML = secondNumDiv;
 }
 
@@ -39,10 +45,16 @@ function insertNumbersMult() {
   let divFirstNum = document.getElementById("firstNumberMult");
   let divSecondNum = document.getElementById("secondNumberMult");
 
-  firstNumMult = prompt("Inserir o primeiro número para multiplicação:", "1º inteiro positivo");
+  firstNumMult = prompt(
+    "Inserir o primeiro número para multiplicação:",
+    "1º inteiro positivo"
+  );
   divFirstNum.innerHTML = firstNumMult;
 
-  secondNumMult = prompt("Inserir o segundo número para multiplicação:", "2º inteiro positivo");
+  secondNumMult = prompt(
+    "Inserir o segundo número para multiplicação:",
+    "2º inteiro positivo"
+  );
   divSecondNum.innerHTML = secondNumMult;
 }
 
@@ -71,10 +83,16 @@ function insertNumbersSum() {
   let divFirstNum = document.getElementById("firstNumberSum");
   let divSecondNum = document.getElementById("secondNumberSum");
 
-  firstNumSum = prompt("Inserir o primeiro número para soma:", "1º inteiro positivo");
+  firstNumSum = prompt(
+    "Inserir o primeiro número para soma:",
+    "1º inteiro positivo"
+  );
   divFirstNum.innerHTML = firstNumSum;
 
-  secondNumSum = prompt("Inserir o segundo número para soma:", "2º inteiro positivo");
+  secondNumSum = prompt(
+    "Inserir o segundo número para soma:",
+    "2º inteiro positivo"
+  );
   divSecondNum.innerHTML = secondNumSum;
 }
 
