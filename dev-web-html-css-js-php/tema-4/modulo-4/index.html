@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJAX + JSON</title>
-</head>
-<body>
-    <div><h1>AJAX + JSON</h1></div>
-    <script>
-        
+    <style>
+        .img_dog {
+            width: 324px;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>AJAX + JSON</h1>
+      <p>Requisição XMLHttpRequest</p>
+
+      <h2>Imagens Aleatórios de Cachorros</h2>
+      <p>
+        A partir do click no botão abaixo uma nova imagem aleatória de cachorros
+        será carregada utilizando requisições assíncronas com XMLHttpRequest
+      </p>
+
+      <img id="img_dog" class="img_dog" src="./carregada_localmente.jpg" alt="Aguardando a imagem ser carregada" />
+      <br />
+      <button onclick="carregarImagens()">Carregar Imagens</button>
+    </div>
+    <script type="text/javascript">
+      function carregarImagens() {
+        var xmlHttpRequest = new XMLHttpRequest();
+        var url = "https://dog.ceo/api/breeds/image/random";
+
+        xmlHttpRequest.open("GET", url, true);
+
+        xmlHttpRequest.onreadystatechange = function () {
+          if (xmlHttpRequest.readyState == 3) {
+            console.log("Carregando o conteúdo");
+          }
+          if (xmlHttpRequest.readyState == 4) {
+            var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+
+            console.log("Requisição Finalizada");
+            console.log("Resultado da Requisição: " + jsonResponse);
+            console.log("Resultado da Requisição: " + jsonResponse.message);
+
+            var imgDog = document.getElementById("img_dog");
+            imgDog.src = jsonResponse.message;
+          }
+        };
+
+        xmlHttpRequest.send(null);
+      }
     </script>
-</body>
+  </body>
 </html>
