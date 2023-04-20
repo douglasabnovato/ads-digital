@@ -146,7 +146,7 @@
         var xmlHttpRequest = new XMLHttpRequest();
         var url = "./url_dogs.json";
 
-        xmlHttpRequest.open("GET", url, true);
+        xmlHttpRequest.open("GET", url);
 
         xmlHttpRequest.onreadystatechange = function () {
           if (xmlHttpRequest.readyState == 4) {
