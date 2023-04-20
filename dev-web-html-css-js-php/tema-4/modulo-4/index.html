@@ -43,6 +43,11 @@
         <button onclick="carregarImagensJson()">
           Carregar Imagens com Json
         </button>
+        <br />
+        <br />
+        <button onclick="carregarImagensNews()">
+          Carregar Imagens com News
+        </button>
       </div>
       <br />
       <br />
@@ -126,18 +131,14 @@
       <div>
         <h2>Requisição JSON</h2>
         <p>
-          Na linha 19, uma instância do objeto é criada. Esse é o primeiro passo
-          para sua utilização. A partir desse ponto, toda referência deverá ser
-          feita pelo nome da variável utilizada (em nosso exemplo,
-          xmlHttpRequest);
+          É composto por um conjunto de pares nome/valor. Na imagem, “status” é
+          o nome de um objeto e “success”, o seu valor. Esses pares são
+          separados por dois pontos “:”;
         </p>
+        <p>Utiliza a vírgula para separar pares, valores ou objetos;</p>
+        <p>O objeto e seus pares são englobados por chaves “{ }”;</p>
         <p>
-          A linha 22 mostra a utilização do método open, que recebe 3
-          parâmetros: o método de requisição dos dados, a url remota/do servidor
-          que queremos acessar e o tipo de requisição – onde “true” define que
-          será feita uma requisição assíncrona e “false”, uma síncrona. Esse
-          argumento é opcional. Logo, pode não ser definido, assumindo o valor
-          padrão “true”;
+          É possível definirmos arrays, que são englobados por colchetes “[ ]”.
         </p>
       </div>
     </div>
@@ -197,6 +198,27 @@
               var imgDog = document.getElementById("img_dog");
               imgDog.src = data.message;
             });
+          })
+          .catch(function (err) {
+            console.error("Erro na requisição Fetch: " + err);
+          });
+      }
+
+      function carregarImagensNews() {
+        var api_id = `CbZ64iO5DNcCp136lDh9PLg3CgLjodXA3VpCdn2mckg`;
+        var url = `https://api.unsplash.com/photos/?client_id=${api_id}`;
+        fetch(url, {
+          method: "get",
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+            console.log(data[2].urls.regular);
+
+            var imgDog = document.getElementById("img_dog");
+            imgDog.src = data[Math.floor(Math.random() * 9)].urls.regular;
           })
           .catch(function (err) {
             console.error("Erro na requisição Fetch: " + err);
