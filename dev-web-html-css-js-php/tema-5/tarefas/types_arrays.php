@@ -82,7 +82,48 @@
     }
 
     echo "<p> - - - </p>";
+
+    $trees = array(
+        'vw'        => "Fusca",
+        0           => "Passat",
+        'chevrolet' => "Monza",
+        1           => "Chevette",
+        'fiat'      => "Tempra",
+        2           => "Uno"
+    );
+
+    print_r($trees);
+
+    echo "O tamanho atual do array é: " . count($trees);
+    echo "\n\n";
     
+    echo "<p> - - - </p>";
+    
+    //Definindo o valor do índice 0 como vazio
+    $trees[0] = '';
+
+    print_r($trees);
+
+    echo "O tamanho atual do array é: " . count($trees);
+    echo "\n\n";
+
+    echo "<p> - - - </p>";
+
+    //Removendo dois elementos do array com unset
+    unset($trees['fiat'], $trees[1]);
+
+    print_r($trees);
+    echo "O tamanho atual do array é: " . count($trees);
+    echo "\n\n";
+
+    echo "<p> - - - </p>";
+
+    //Removendo elementos do array com array_splice
+    array_splice($trees, 1, 2);
+
+    print_r($trees);
+    echo "O tamanho atual do array é: " . count($trees);
+
     ?>
 </body>
 
