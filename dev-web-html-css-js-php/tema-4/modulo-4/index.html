@@ -38,6 +38,11 @@
         <button onclick="carregarImagensFetch()">
           Carregar Imagens com Fetch
         </button>
+        <br />
+        <br />
+        <button onclick="carregarImagensJson()">
+          Carregar Imagens com Json
+        </button>
       </div>
       <br />
       <br />
@@ -133,10 +138,32 @@
           será feita uma requisição assíncrona e “false”, uma síncrona. Esse
           argumento é opcional. Logo, pode não ser definido, assumindo o valor
           padrão “true”;
-        </p> 
+        </p>
       </div>
     </div>
     <script type="text/javascript">
+      function carregarImagensJson() {
+        var xmlHttpRequest = new XMLHttpRequest();
+        var url = "./url_dogs.json";
+
+        xmlHttpRequest.open("GET", url, true);
+
+        xmlHttpRequest.onreadystatechange = function () {
+          if (xmlHttpRequest.readyState == 4) {
+            var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+            console.log(
+              "Math.floor(Math.random() * 3)",
+              Math.floor(Math.random() * 3)
+            );
+
+            var imgDog = document.getElementById("img_dog");
+            imgDog.src = jsonResponse[Math.floor(Math.random() * 3)].message;
+          }
+        };
+
+        xmlHttpRequest.send(null);
+      }
+
       function carregarImagensXmlHttpRequest() {
         var xmlHttpRequest = new XMLHttpRequest();
         var url = "https://dog.ceo/api/breeds/image/random";
@@ -149,14 +176,7 @@
           }
           if (xmlHttpRequest.readyState == 4) {
             var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
-
-            console.log("Requisição Finalizada XmlHttpRequest");
-            console.log(
-              "Resultado da Requisição XmlHttpRequest: " + jsonResponse
-            );
-            console.log(
-              "Resultado da Requisição XmlHttpRequest: " + jsonResponse.message
-            );
+            console.log(jsonResponse);
 
             var imgDog = document.getElementById("img_dog");
             imgDog.src = jsonResponse.message;
@@ -174,15 +194,12 @@
           .then(function (response) {
             response.json().then(function (data) {
               console.log("Resultado da Requisição Fetch: " + data.message);
-
               var imgDog = document.getElementById("img_dog");
               imgDog.src = data.message;
             });
           })
           .catch(function (err) {
-            console.error(
-              "O seguinte erro ocorreu durante a requisição Fetch: " + err
-            );
+            console.error("Erro na requisição Fetch: " + err);
           });
       }
     </script>
