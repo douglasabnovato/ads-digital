@@ -4,30 +4,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AJAX + JSON</title>
+    <title>AJAX + Fetch + JSON</title>
     <style>
-        .img_dog {
-            width: 324px;
-        }
+      .img_dog {
+        width: 324px;
+      }
     </style>
   </head>
   <body>
     <div>
-      <h1>AJAX + JSON</h1>
-      <p>Requisição XMLHttpRequest</p>
-
-      <h2>Imagens Aleatórios de Cachorros</h2>
-      <p>
-        A partir do click no botão abaixo uma nova imagem aleatória de cachorros
-        será carregada utilizando requisições assíncronas com XMLHttpRequest
-      </p>
-
-      <img id="img_dog" class="img_dog" src="./carregada_localmente.jpg" alt="Aguardando a imagem ser carregada" />
+      <h1>AJAX + Fetch + JSON</h1>
+    </div>
+    <div>
+      <div>
+        <h2>Imagens Aleatórios de Cachorros</h2>
+        <p>
+          A partir do click no botão abaixo uma nova imagem aleatória de
+          cachorros será carregada utilizando requisições assíncronas com
+          XMLHttpRequest
+        </p>
+        <img
+          id="img_dog"
+          class="img_dog"
+          src="./carregada_localmente.jpg"
+          alt="Aguardando a imagem ser carregada"
+        />
+        <br />
+        <button onclick="carregarImagensXmlHttpRequest()">
+          Carregar Imagens com XmlHttpRequest
+        </button>
+        <br />
+        <br />
+        <button onclick="carregarImagensFetch()">
+          Carregar Imagens com Fetch
+        </button>
+      </div>
       <br />
-      <button onclick="carregarImagens()">Carregar Imagens</button>
+      <br />
+      <div>
+        <h2>Requisição XMLHttpRequest - AJAX</h2>
+        <p>
+          Na linha 19, uma instância do objeto é criada. Esse é o primeiro passo
+          para sua utilização. A partir desse ponto, toda referência deverá ser
+          feita pelo nome da variável utilizada (em nosso exemplo,
+          xmlHttpRequest);
+        </p>
+        <p>
+          A linha 22 mostra a utilização do método open, que recebe 3
+          parâmetros: o método de requisição dos dados, a url remota/do servidor
+          que queremos acessar e o tipo de requisição – onde “true” define que
+          será feita uma requisição assíncrona e “false”, uma síncrona. Esse
+          argumento é opcional. Logo, pode não ser definido, assumindo o valor
+          padrão “true”;
+        </p>
+        <p>
+          Continuando o código, na linha 24 temos a propriedade
+          “onreadystatechange”, que monitora o status da requisição
+          XMLHttpRequest – propriedade “readyState” − e especifica uma função a
+          ser executada a cada mudança;
+        </p>
+        <p>
+          Repare, agora, na linha 25: o status 3 significa que a requisição
+          ainda está sendo processada. Logo, poderíamos, por exemplo, exibir em
+          nossa tela uma mensagem (ou imagem, como é muito comum) avisando que a
+          informação requisitada está sendo carregada. Perceba que, dependendo
+          do tempo de resposta do servidor remoto, nem sempre será possível ver
+          essa informação;
+        </p>
+        <p>
+          Já na linha 28 temos o tratamento do status quando ele for igual a 4,
+          ou seja, quando a requisição estiver concluída. Além da propriedade
+          “readyState”, poderíamos também monitorar a propriedade “status”, que
+          armazena o código de resposta do servidor Http utilizado pela
+          XMLHttpRequest;
+        </p>
+        <p>
+          Ainda na linha 30, repare que também foi utilizado outro método, o
+          parse. Esse método não pertence ao objeto XMLHttpRequest, mas este é
+          necessário quando o recurso requisitado devolve o conteúdo em formato
+          JSON;
+        </p>
+        <p>
+          Por fim, na linha 41 é utilizado o método send, que envia a
+          requisição.
+        </p>
+      </div>
+      <br />
+      <br />
+      <div>
+        <h2>Requisição Fetch</h2>
+        <p>
+          URL do servidor remoto, definida na linha 19 e utilizada na linha 20;
+        </p>
+        <p>
+          Fetch options – em nosso exemplo utilizamos apenas um parâmetro, o
+          método. Tal parâmetro, inclusive, é opcional. Veja a linha 21, onde
+          declaramos o GET, que é o método padrão. Além desse parâmetro, há
+          outros disponíveis;
+        </p>
+        <p>
+          Tipo de dado retornado pela requisição. Veja a linha 24, onde foi
+          utilizado o objeto correspondente ao tipo de dado retornado pela
+          requisição – nesse caso, JSON. Há outros tipos de objetos, como texto
+          e até mesmo bytes, sendo possível, por exemplo, carregar imagens,
+          arquivos pdf, entre outros.
+        </p>
+        <p>
+          a forma, própria, como a API Fetch trata a requisição (request) e o
+          seu retorno (response): quando o método fetch é executado, ele retorna
+          uma promessa (promise) que resolve a resposta (response) à requisição,
+          sendo esta bem-sucedida ou não.
+        </p>
+      </div>
+      <br />
+      <br />
+      <div>
+        <h2>Requisição JSON</h2>
+        <p>
+          Na linha 19, uma instância do objeto é criada. Esse é o primeiro passo
+          para sua utilização. A partir desse ponto, toda referência deverá ser
+          feita pelo nome da variável utilizada (em nosso exemplo,
+          xmlHttpRequest);
+        </p>
+        <p>
+          A linha 22 mostra a utilização do método open, que recebe 3
+          parâmetros: o método de requisição dos dados, a url remota/do servidor
+          que queremos acessar e o tipo de requisição – onde “true” define que
+          será feita uma requisição assíncrona e “false”, uma síncrona. Esse
+          argumento é opcional. Logo, pode não ser definido, assumindo o valor
+          padrão “true”;
+        </p> 
+      </div>
     </div>
     <script type="text/javascript">
-      function carregarImagens() {
+      function carregarImagensXmlHttpRequest() {
         var xmlHttpRequest = new XMLHttpRequest();
         var url = "https://dog.ceo/api/breeds/image/random";
 
@@ -35,14 +145,18 @@
 
         xmlHttpRequest.onreadystatechange = function () {
           if (xmlHttpRequest.readyState == 3) {
-            console.log("Carregando o conteúdo");
+            console.log("Carregando o conteúdo XmlHttpRequest");
           }
           if (xmlHttpRequest.readyState == 4) {
             var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
 
-            console.log("Requisição Finalizada");
-            console.log("Resultado da Requisição: " + jsonResponse);
-            console.log("Resultado da Requisição: " + jsonResponse.message);
+            console.log("Requisição Finalizada XmlHttpRequest");
+            console.log(
+              "Resultado da Requisição XmlHttpRequest: " + jsonResponse
+            );
+            console.log(
+              "Resultado da Requisição XmlHttpRequest: " + jsonResponse.message
+            );
 
             var imgDog = document.getElementById("img_dog");
             imgDog.src = jsonResponse.message;
@@ -50,6 +164,26 @@
         };
 
         xmlHttpRequest.send(null);
+      }
+
+      function carregarImagensFetch() {
+        var url = "https://dog.ceo/api/breeds/image/random";
+        fetch(url, {
+          method: "get",
+        })
+          .then(function (response) {
+            response.json().then(function (data) {
+              console.log("Resultado da Requisição Fetch: " + data.message);
+
+              var imgDog = document.getElementById("img_dog");
+              imgDog.src = data.message;
+            });
+          })
+          .catch(function (err) {
+            console.error(
+              "O seguinte erro ocorreu durante a requisição Fetch: " + err
+            );
+          });
       }
     </script>
   </body>
