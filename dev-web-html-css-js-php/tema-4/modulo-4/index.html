@@ -154,15 +154,9 @@
         var url = "./url_dogs.json";
 
         xmlHttpRequest.open("GET", url);
-
         xmlHttpRequest.onreadystatechange = function () {
           if (xmlHttpRequest.readyState == 4) {
             var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
-            console.log(
-              "Math.floor(Math.random() * 3)",
-              Math.floor(Math.random() * 3)
-            );
-
             var imgDog = document.getElementById("img_dog");
             imgDog.src = jsonResponse[Math.floor(Math.random() * 3)].message;
           }
@@ -176,15 +170,9 @@
         var url = "https://dog.ceo/api/breeds/image/random";
 
         xmlHttpRequest.open("GET", url, true);
-
         xmlHttpRequest.onreadystatechange = function () {
-          if (xmlHttpRequest.readyState == 3) {
-            console.log("Carregando o conteúdo XmlHttpRequest");
-          }
           if (xmlHttpRequest.readyState == 4) {
             var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
-            console.log(jsonResponse);
-
             var imgDog = document.getElementById("img_dog");
             imgDog.src = jsonResponse.message;
           }
@@ -195,12 +183,12 @@
 
       function carregarImagensFetch() {
         var url = "https://dog.ceo/api/breeds/image/random";
+
         fetch(url, {
           method: "get",
         })
           .then(function (response) {
             response.json().then(function (data) {
-              console.log("Resultado da Requisição Fetch: " + data.message);
               var imgDog = document.getElementById("img_dog");
               imgDog.src = data.message;
             });
@@ -213,6 +201,7 @@
       function carregarImagensNews() {
         var api_id = `CbZ64iO5DNcCp136lDh9PLg3CgLjodXA3VpCdn2mckg`;
         var url = `https://api.unsplash.com/photos/?client_id=${api_id}`;
+
         fetch(url, {
           method: "get",
         })
@@ -220,11 +209,6 @@
             return response.json();
           })
           .then(function (data) {
-            console.log(
-              "data",
-              data[Math.floor(Math.random() * 9)].urls.regular
-            );
-
             var imgDog = document.getElementById("img_dog");
             imgDog.src = data[Math.floor(Math.random() * 9)].urls.regular;
           })
