@@ -64,6 +64,37 @@
     echo "<p> --- </p>";
 
     ?>
+
+    <div>
+        <h2>Módulo 3 | Conceito 2 / 2: Funções em PHP</h2>
+
+        <p>
+            Funções, em linguagens de programação, são pedaços de código, encapsulados, que podem ser chamados em qualquer outro trecho do programa ou do código.
+        </p>
+    </div>
+
+    <?php
+
+    echo "<p> --- Funções </p>";
+
+    $numero1 = 14;
+    $numero2 = 12;
+
+    imprimir_resultado($numero1, $numero2);
+
+    function soma($num1, $num2)
+    {
+        return $num1 + $num2;
+    }
+
+    function imprimir_resultado($num1, $num2)
+    {
+        echo "O resultado da operação é igual a: " . soma($num1, $num2);
+    }
+
+    echo "<p> --- </p>";
+
+    ?>
 </body>
 
 </html>
