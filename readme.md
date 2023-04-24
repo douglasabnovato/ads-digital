@@ -1,5 +1,9 @@
 # Análise e Desenvolvimento de Sistemas
 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 1.1 do projeto" title="#ads" src="./.github/template.jpg">
+</p>
+
 ## CALENDÁRIO ACADÊMICO 2023.1 DIGITAL
 
 - 1. Arquitetura de Computadores
