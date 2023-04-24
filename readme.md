@@ -4,6 +4,12 @@
   <img alt="versão 1.1 do projeto" title="#ads" src="./.github/template.jpg">
 </p>
 
+## Projeto
+
+- Projeto desenvolvido para praticar os fundamentos das disciplinas do curso de analise e desenvolvimento de sistemas.
+
+- Os arquivos e instruções originais estão no drive pessoal para consultas e esclarecimentos no processo de solucionar os desafios.
+
 ## CALENDÁRIO ACADÊMICO 2023.1 DIGITAL
 
 - 1. Arquitetura de Computadores
