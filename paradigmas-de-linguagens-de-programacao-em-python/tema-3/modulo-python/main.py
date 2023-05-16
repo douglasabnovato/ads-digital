@@ -1,18 +1,9 @@
-# codigo 15
-def taximetro(distancia):
-    def calculaMult():
-        if distancia < 5:
-            return 1.2
-        else:
-            return 1
+# código 1
+nick = "doug"
 
-    multiplicador = calculaMult()
-    largada = 3
-    km_rodado = 2
-    valor = (largada + distancia * km_rodado) * multiplicador
-    return valor
-
-
-dist = eval(input("Entre com a distancia a ser percorrida em km: \n"))
-pagamento = taximetro(dist)
-print(f'O valor a pagar é R$ {pagamento}')
+if(nick == "Douglas"):
+    print('você é incrível.')
+elif (nick == "douglaS"):
+    print('você é MAIS incrível.')
+elif ((nick != "Douglas") & (nick != "douglaS")):
+    print('você está progredindo.')
